@@ -1,6 +1,6 @@
 # API Spec
 
-[Postman](https://api.postman.com/collections/14485136-b17e1b6b-1f3a-4f2f-821a-becef08fdd16?access_key=PMAT-01HETBK3NH9YSY2ZG3SBYBSD33)
+[Postman](https://www.postman.com/wefallinlovewithppl/workspace/hangry-case-study/collection/14485136-b17e1b6b-1f3a-4f2f-821a-becef08fdd16?action=share&creator=14485136)
 
 ## MENU
 
