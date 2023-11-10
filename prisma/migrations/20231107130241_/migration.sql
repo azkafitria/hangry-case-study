@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "carts" ALTER COLUMN "modified_at" DROP DEFAULT,
+ALTER COLUMN "total" DROP DEFAULT;
