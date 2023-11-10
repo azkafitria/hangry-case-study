@@ -15,6 +15,15 @@ const addCartItemService = async (menuId, request) => {
 
   const menu = await getMenu(menuId);
 
+  if (menu.availability == 0) {
+    throw new ResponseError(400, `Menu with id ${menuId} is out of stock.`);
+  } else if (menu.availability < cartItem.quantity) {
+    throw new ResponseError(
+      400,
+      `Not enough availability for menu with id ${menuId}.`
+    );
+  }
+
   const cart = await prismaClient.cart.findFirst({
     where: {
       status: "ACTIVE",
