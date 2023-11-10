@@ -19,9 +19,9 @@ const checkoutOrderService = async (cartId, request) => {
   });
 
   if (!cart) {
-    throw new ResponseError(404, "Cart with id " + cartId + " is not found.");
+    throw new ResponseError(404, `Cart with id ${cartId} is not found.`);
   } else if (cart.status === "INACTIVE") {
-    throw new ResponseError(400, "Cart with id " + cartId + " is inactive.");
+    throw new ResponseError(400, `Cart with id ${cartId} is inactive.`);
   }
 
   const countOnGoingOrder = await prismaClient.order.count({
@@ -134,7 +134,7 @@ const getOrder = async (id) => {
   });
 
   if (!order) {
-    throw new ResponseError(404, "Order with id " + id + " is not found.");
+    throw new ResponseError(404, `Order with id ${id} is not found.`);
   }
 
   const orderItems = await prismaClient.orderItem.findMany({

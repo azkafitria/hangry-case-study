@@ -46,7 +46,7 @@ const removeMenuController = async (req, res, next) => {
     const id = req.params.menuId;
     await removeMenuService(id);
     res.status(200).json({
-      data: "Menu with id " + id + " is removed.",
+      data: `Menu with id ${id} is removed.`,
     });
   } catch (e) {
     next(e);

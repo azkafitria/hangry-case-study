@@ -131,7 +131,7 @@ const getCartService = async (id) => {
   });
 
   if (!cart) {
-    throw new ResponseError(404, "Cart with id " + id + " is not found.");
+    throw new ResponseError(404, `Cart with id ${id} is not found.`);
   }
 
   const cartItems = await prismaClient.cartItem.findMany({

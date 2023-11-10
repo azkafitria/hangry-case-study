@@ -58,7 +58,7 @@ const getMenu = async (id) => {
   });
 
   if (!menu) {
-    throw new ResponseError(404, "Menu with id " + id + " is not found.");
+    throw new ResponseError(404, `Menu with id ${id} is not found.`);
   }
   return menu;
 };
